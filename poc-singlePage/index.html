@@ -125,22 +125,18 @@
 		
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>
-			function isMobile() {
-				try{ document.createEvent("TouchEvent"); return true; }
-				catch(e){ return false;}
-			}
-			if(isMobile()){
-				$(".wow").removeClass("wow");
-				}else{}
-		</script>		
-
 		<!-- Bootstrap JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<!-- wow.js -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
 		<script>
 			new WOW().init()
+			wow = new WOW(
+				{
+					mobile:       false,       // default
+				}
+			)
+			wow.init();
 		</script>
 	</body>
 </html>
